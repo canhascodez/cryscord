@@ -1,2 +1,3 @@
-require "spec"
-require "../src/cryscord"
+# require "spec"
+require "spectator"
+require "../src/*"

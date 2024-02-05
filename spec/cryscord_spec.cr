@@ -1,12 +1,12 @@
 require "./spec_helper"
 
-describe Cryscord do
+Spectator.describe Cryscord do
 
   it "has a version number" do
-    Cryscord::VERSION.should_not be_nil
+    expect(Cryscord::VERSION).not_to be_nil
   end
 
   it "has a discord API version" do
-    Cryscord::API_VERSION.should_not be_nil
+    expect(Cryscord::API_VERSION).not_to be_nil
   end
 end
