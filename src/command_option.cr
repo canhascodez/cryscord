@@ -21,7 +21,7 @@ module Cryscord
     max_value : UInt64? = nil,  # integer for INTEGER, double for NUMBER
     min_length : UInt32? = nil, # min 0, max 6000
     max_length : UInt32? = nil, # min 1, max 6000
-    autocomplete = false  ) do
+    autocomplete = false) do
     enum Type : Int32
       SUB_COMMAND       = 1
       SUB_COMMAND_GROUP
