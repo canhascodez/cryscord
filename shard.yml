@@ -7,11 +7,19 @@ authors:
 crystal: '>= 1.11.2'
 
 license: MIT
+description: A Discord API library for Crystal.
+repository: "https://github.com/canhascodez/cryscord"
 
 development_dependencies:
   ameba:
     github: crystal-ameba/ameba
-    version: ~> 1.6.1
+    version: ~> 1.6
+  faker:
+    github: canhascodez/faker
   spectator:
     gitlab: arctic-fox/spectator
-    version: ~> 0.12.0
+    version: ~> 0.12
+
+targets:
+  cryscord: 
+    main: src/cryscord.cr

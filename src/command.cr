@@ -5,7 +5,7 @@ require "./permission"
 
 module Cryscord
   class Command
-    CHAT_INPUT_REGEX = /^[-_\p{L}\p{N}\p{sc=Deva}\p{sc=Thai}]{1,32}$/
+    CHAT_INPUT_REGEX = /^[-_\p{L}\p{N}\p{Devanagari}\p{Thai}]{1,32}$/
     alias LOCALE_DICT = Hash(String, String)
     alias OPTIONS = Array(CommandOption)
 
