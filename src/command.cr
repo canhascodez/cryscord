@@ -5,8 +5,8 @@ require "./permission"
 module Cryscord
   class Command
     CHAT_INPUT_REGEX = /^[-_\p{L}\p{N}\p{Devanagari}\p{Thai}]{1,32}$/
-    alias LOCALE_DICT = Hash(String, String)
-    alias OPTIONS = Array(CommandOption)
+    alias LocaleDict = Hash(String, String)
+    alias Options = Array(CommandOption)
 
     enum Type : Int32
       CHAT_INPUT = 1
@@ -19,10 +19,10 @@ module Cryscord
     property!(application_id : Snowflake)
     property?(guild_id : Snowflake)
     property!(name : String) # 32 characters max
-    property?(name_localizations : LOCALE_DICT)
+    property?(name_localizations : LocaleDict)
     property!(description : String) # 100 characters max, empty for USER and MESSAGE types
-    property?(description_localizations : LOCALE_DICT)
-    property?(options : OPTIONS) # CHAT_INPUT type only
+    property?(description_localizations : LocaleDict)
+    property?(options : Options) # CHAT_INPUT type only
     property?(default_member_permissions : Permission)
     property?(dm_permission : Bool)
     property?(default_permission : Bool) # deprecated
@@ -36,10 +36,10 @@ module Cryscord
       @version,
       @type = Type::CHAT_INPUT,
       @guild_id = nil,
-      @name_localizations = LOCALE_DICT.new,
+      @name_localizations = LocaleDict.new,
       @description = "",
-      @description_localizations = LOCALE_DICT.new,
-      @options = OPTIONS.new,
+      @description_localizations = LocaleDict.new,
+      @options = Options.new,
       @default_member_permissions = "",
       @dm_permission = true,
       @default_permission = nil,
