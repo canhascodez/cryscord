@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0",
+    "tasks": [
+    {
+      "label": "Debug",
+      "command": "shards build --debug ${workspaceFolderBasename}",
+      "type": "shell"
+    },
+    {
+      "label": "Debug Current File",
+      "command": "crystal build --debug ${relativeFile} -o bin/${fileBasenameNoExtension}",
+      "type": "shell",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Test",
+      "command": "crystal spec",
+      "type": "shell",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug",
+      "type": "lldb-mi",
+      "request": "launch",
+      "target": "./bin/${workspaceFolderBasename}",
+      "cwd": "${workspaceRoot}",
+      "valuesFormatting": "parseText",
+      "preLaunchTask": "Debug"
+    },
+    {
+      "name": "Debug Current File",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "program": "./bin/${fileBasenameNoExtension}",
+      "cwd": "${workspaceRoot}",
+      "preLaunchTask": "Debug Current File",
+      "initCommands": [
+        "command script import ${workspaceFolder}/.vscode/crystal_formatters.py"
+      ]
+    }
+  ]
+}

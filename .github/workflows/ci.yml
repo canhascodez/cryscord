@@ -1,0 +1,37 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+    types: [ opened, synchronize, reopened ]
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [ ubuntu-latest ]
+        crystal: [ latest ]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Set Timezone to UTC
+        uses: szenius/set-timezone@v1.2
+
+      - name: Install Crystal
+        uses: crystal-lang/install-crystal@v1
+        with:
+          crystal: ${{ matrix.crystal }}
+      
+      - name: Download Source
+        uses: actions/checkout@v2
+      
+      - name: Install Dependencies
+        run: shards install
+      
+      - name: Run Tests
+        run: crystal spec
+
+      - name: Run Static Analysis
+        run: ameba
