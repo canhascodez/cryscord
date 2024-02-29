@@ -1,6 +1,8 @@
 # cryscord
 
-TODO: Write a description here
+[![Tests](https://github.com/canhascodez/cryscord/actions/workflows/ci.yml/badge.svg)](https://github.com/canhascodez/cryscord/actions/workflows/ci.yml)
+
+Cryscord is a (WIP) discord library for crystal-lang 😸
 
 ## Installation
 
@@ -9,7 +11,7 @@ TODO: Write a description here
    ```yaml
    dependencies:
      cryscord:
-       github: your-github-user/cryscord
+       github: canhascodez/cryscord
    ```
 
 2. Run `shards install`
@@ -20,15 +22,15 @@ TODO: Write a description here
 require "cryscord"
 ```
 
-TODO: Write usage instructions here
+This is not currently in any kind of usable condition. The Discord API is fairly large and complex, and you need to implement a fair amount of it to be minimally useful.
 
 ## Development
 
-TODO: Write development instructions here
+I have little expectation that this project will be relevant to anyone else's interests.
 
 ## Contributing
 
-1. Fork it (<https://github.com/your-github-user/cryscord/fork>)
+1. Fork it (<https://github.com/canhascodez/cryscord/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
@@ -36,4 +38,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [Kaia Leahy](https://github.com/your-github-user) - creator and maintainer
+- [Kaia Leahy](https://github.com/canhascodez) - creator and maintainer
