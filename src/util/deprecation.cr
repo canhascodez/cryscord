@@ -2,7 +2,9 @@ require "log"
 
 module Cryscord::Deprecation
   class DeprecationError < Exception; end
+
   Log = ::Log.for("deprecation")
+
   macro deprecated_field(name, deprecated, removed, current = Discord::API_VERSION)
     {% dep = current > deprecated || current == deprecated %}
     {% rem = current > removed || current == removed %}

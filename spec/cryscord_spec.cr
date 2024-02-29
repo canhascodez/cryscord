@@ -1,7 +1,6 @@
 require "./spec_helper"
 
 Spectator.describe Cryscord do
-
   it "has a version number" do
     expect(Cryscord::VERSION).not_to be_nil
   end

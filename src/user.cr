@@ -32,12 +32,12 @@ module Cryscord
       HYPESQUAD_ONLINE_HOUSE_3
       PREMIUM_EARLY_SUPPORTER
       TEAM_PSEUDO_USER
-      BUG_HUNTER_LEVEL_2 = 1 << 14
-      VERIFIED_BOT = 1 << 16
+      BUG_HUNTER_LEVEL_2       = 1 << 14
+      VERIFIED_BOT             = 1 << 16
       VERIFIED_DEVELOPER
       CERTIFIED_MODERATOR
       BOT_HTTP_INTERACTIONS
-      ACTIVE_DEVELOPER = 1 << 22
+      ACTIVE_DEVELOPER         = 1 << 22
     end
 
     enum PremiumType : UInt8

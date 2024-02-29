@@ -1,4 +1,3 @@
-
 require "./snowflake"
 require "./command_option"
 require "./permission"
@@ -11,8 +10,8 @@ module Cryscord
 
     enum Type : Int32
       CHAT_INPUT = 1
-      USER = 2
-      MESSAGE = 3
+      USER       = 2
+      MESSAGE    = 3
     end
 
     property!(id : Snowflake)

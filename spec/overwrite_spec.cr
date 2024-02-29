@@ -1,7 +1,6 @@
 require "./spec_helper"
 
 Spectator.describe Cryscord::Overwrite do
-  
   subject do
     described_class.new(
       Faker::Number.number(8).to_i,
